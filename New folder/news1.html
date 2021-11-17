@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<style>
+body{
+box-sizing: border-box;
+background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/home/dangi/home_page/bg3.jpg);
+background-size:1900px 1200px;
+
+}
+.head{
+	background: linear-gradient(-45deg, #FD9A01, #FD6104, #FFCE03);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.bt
+{
+height:80px;
+margin-top:2%;
+
+}
+.button {
+  border-radius: 4px;
+  background-color: #ff9900;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-left:2%;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+.bk_button {
+  border-radius: 4px;
+  background-color: #ff9900;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-left:40%;
+}
+
+.bk_button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.bk_button span:after {
+  content: '\00AB';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+
+.bk_button:hover span {
+  padding-left: 25px;
+}
+
+.bk_button:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
+
+
+/* Set height of body and the document to 100% */
+
+
+/* Style tab links */
+.tablink {
+    background-color: white;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    /*padding: 14px 16px;*/
+    font-size: 17px;
+    height:50%;
+    width: 50%;
+}
+
+.tablink:hover {
+    background-color: white;
+}
+
+
+textarea{
+margin-left:20%;
+margin-top:1%;
+margin-bottom:0px;
+border-radius:15px;
+border:5px solid #ff9900;
+box-shadow: 0px 0px 40px 3px #ffa700;
+
+}
+
+h3{
+color: #fff;
+font-size: 20px;
+margin-left:22%;
+}
+h1{
+color: white;
+font-size: 30px;
+margin-left:40%;
+padding-top:5px;
+padding-bottom:5px;
+margin-top:0px;
+}
+
+::placeholder{
+font-size:26px;
+text-align:center;
+}
+
+p
+{
+font-size:20px;
+border-radius:25px;
+background:white;
+color:black;
+border:1px solid white;
+margin-top:50px;
+margin-right:10%;
+margin-left:10%;
+padding:10px 0px 10px 25px;
+text-align:center;
+}
+
+form
+{
+padding-top:0px;
+}
+
+.tablink
+{
+	border:5px solid #ff9900;
+	height:300px;
+	margin-top:30px;
+	margin-left:27%;
+	box-shadow: 0px 0px 40px 0px #ffa700;
+}
+
+
+
+.bt1
+{
+margin-top:22%;
+margin-left:43%;
+}
+
+
+</style>
+
+
+
+</head>
+<body>
+
+<div class="head">
+  <h1>NEWS HUB</h1>
+</div>
+
+<form action="http://127.0.0.1:5000/summary",  method='POST'>
+
+<div name="ENTER_TEXT" id="ENTER_TEXT" class="tabcontent">
+  <p>Many weekly newsletters take the form of an introduction followed by a curated selection of relevant articles. Summarization would allow organizations to further enrich newsletters with a stream of summaries, which can be a particularly convenient format in mobile.</p>
+
+  <!--textarea cols="90" rows="20" wrap="hard" name="document" id="document" required></textarea-->
+    <textarea name="document" id="document" hidden>
+        My anem is ahayan, because
+            asAa A         adaD''
+        </textarea>
+</div>
+<input class="tablink" onclick="openPage('ENTER_TEXT', this, '#ffff')" id="defaultOpen"></input>
+<div class="bt1">
+
+    <button type="button" style="color:black;"name="document1" id="document1" onclick="func1()" style="height:20px;width:100px;">Extract1</button>
+    <button type="button" style="color:black;"name="document2" id="document2" onclick="func2()" style="height:20px;width:100px;">Extract2</button>
+   <button type="button" style="color:black;"name="document3" id="document3" onclick="func3()" style="height:20px;width:100px;">Extract3</button>
+</div>
+
+    <script>
+        function func1()
+        { var a="My anem is ahayan, becausedsvdsgfgsdgdscsdvsdsdgsAFSf asf QF QW QWRFQARF QR'www.nytimes.com'"
+           document.getElementById('document').value=a;
+          }
+         function func2()
+        { var a="My anem is ahayan, becausedsvdsgfgsdgdscsdvsdsdgsAFSf asf QF QW QWRFQARF QR'www.edition.cnn.com'"
+           document.getElementById('document').value=a;
+          }
+          function func3()
+          { var a="My anem is ahayan, becausedsvdsgfgsdgdscsdvsdsdgsAFSf asf QF QW QWRFQARF QR'www.news18.com'"
+           document.getElementById('document').value=a;
+          }
+    </script>
+
+
+<!--/div-->
+<div class="bt">
+<button class="bk_button" type="submit" value="submit"><span> Back </span></button>
+<button class="button" type="submit" value="submit"><span> Summarize </span></button>
+</div>
+</form>
+
+
+<div>
+
+
+  <script>
+  $(document).on('ready', function() {
+      $("#input-folder-1").fileinput({
+          browseLabel: 'Select Folder...'
+      });
+  });
+  </script>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>

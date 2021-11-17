@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Summarizer</title>
+
+<style>
+.bk_button {
+  border-radius: 4px;
+  background-color: #ff9900;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-left:42%;
+}
+
+.bk_button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.bk_button span:after {
+  content: '\00AB';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+
+.bk_button:hover span {
+  padding-left: 25px;
+}
+
+.bk_button:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
+
+body{
+box-sizing: border-box;
+background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(home.jpg);
+background-size:90%;
+
+}
+
+.head{
+	background: linear-gradient(-45deg, #FD9A01, #FD6104, #FFCE03);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.container
+{
+margin-left:0%;
+margin-top:2%;
+margin-bottom:2%;
+background:white;
+border-radius:15px;
+border:5px solid #ff9900;
+
+text-align:center;
+
+}
+.head1{
+color: white;
+font-size: 30px;
+margin-left:38%;
+padding-top:5px;
+padding-bottom:5px;
+margin-top:0px;
+}
+</style>
+</head>
+<body>
+<div class="head">
+<h1 class="head1">TEXT SUMMARIZATION</h1>
+</div>
+<div class="container">
+    <h1>{{title}}</h1>
+    {% for thing in output %}
+        <p>{{thing}}</p>
+    {% endfor %}
+    <p><br><br></p>
+</div>
+<button type="button" class="bk_button" onclick="ff()"><span> Back </span></button>
+  <script>
+    function ff()
+    {
+        window.history.back();
+    }
+  </script>
+
+</body>
+</html>
